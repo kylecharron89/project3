@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <title>Aloha Apparel Co.</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+    <script src="https://use.fontawesome.com/334ceb063c.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script type="text/javascript" src="flickity.js"></script>
+    <meta charset="UTF-8">
+    <script src="smoothscroll.js"></script>
+  </head>
+  <body>
+
+    <div class="flexbox">
+      <header>
+        <div class="top">
+            <img class="logo" src="images/aloha-logo.svg"/>
+            <img class="cart" src="images/cart-icon.svg"/>
+        </div>
+        <div class="navbar">
+          <p>About</p>
+          <p>Shop</p>
+          <p>Featured</p>
+          <p>Updates</p>
+        </div>
+      </header>
+      <div class="banner">
+        <img class="girl" src="images/banner-girl.png" />
+      </div>
+
+      <div class="handcrafted">
+        <h1><span class="italics">Hand-Crafted</span> Styles</h1>
+        <p>Aloha Apparel Co. sells on the finest ready-to-travel
+           clothing. Browse our current selection of products or
+           sign-up for updates below.</p>
+      </div>
+      <main class="products">
+        <div class="love">
+          <h1><span class="italics">Most-Loved</span> Products</h1>
+        </div>
+        <div class="">
+          <div class="main-carousel" >
+            <div class="carousel-cell knit">
+              <img src="images/stretch-knit-dress.jpg"/>
+              <p><span class="greyfont">DRESSES</span></p>
+              <h4><span class="orangefont">Stretch Knit Dress</span></h4>
+              <p><span class="greyfont">$169.00</span></p>
+            </div>
+            <div class="carousel-cell cotton">
+              <img src="images/cotton-blue-shirt.jpg"/>
+              <p><span class="greyfont">SHIRTS</span></p>
+              <h4><span class="orangefont">Cotton Blue Shirt</span></h4>
+              <p><span class="greyfont">$89.00</span></p>
+            </div>
+            <div class="carousel-cell stretch">
+              <img src="images/checked-stretch-dress.jpg"/>
+              <p><span class="greyfont">DRESSES</span></p>
+              <h4><span class="orangefont">Checked Stretch Dress</span></h4>
+              <p><span class="greyfont">$129.00</span></p>
+            </div>
+            <div class="carousel-cell hipster">
+              <img src="images/blue-hipster-backpack.jpg"/>
+              <p><span class="greyfont">BAGS</span></p>
+              <h4><span class="orangefont">Blue Hipster Backpack</span></h4>
+              <p><span class="greyfont">$69.00</span></p>
+            </div>
+              <div class="carousel-cell blue">
+                <img src="images/blue-silk-dress.jpg"/>
+                <p><span class="greyfont">DRESSES</span></p>
+                <h4><span class="orangefont">Blue Silk Dress</span></h4>
+                <p><span class="greyfont">$129.00</span></p>
+              </div>
+              <div class="carousel-cell yellow">
+                <img src="images/cotton-yellow-tshirt.jpg"/>
+                <p><span class="greyfont">SHIRTS</span></p>
+                <h4><span class="orangefont">Cotton Yellow T-Shirt</span></h4>
+                <p><span class="greyfont">$89.00</span></p>
+              </div>
+              <div class="carousel-cell dotted">
+                <img src="images/pink-dotted-dress.jpg"/>
+                <p><span class="greyfont">DRESSES</span></p>
+                <h4><span class="orangefont">Pink Dotted Dress</span></h4>
+                <p><span class="greyfont">$99.00</span></p>
+              </div>
+              <div class="carousel-cell shorts">
+                <img src="images/demin-overall-shorts.jpg"/>
+                <p><span class="greyfont">SHORTS</span></p>
+                <h4><span class="orangefont">Denim Overall Shorts</span></h4>
+                <p><span class="greyfont">$89.00</span></p>
+              </div>
+            </div>
+          </div>
+
+      </main>
+      <div class="updates">
+        <div class="signup">
+          <h1><span class="italics">Sign-Up for</span> Updates</h1>
+          <p>Stay updated on our latest product releases,
+            be first to find out about upcoming sales and get
+            free style tips from our blog. Unsubscribe at any time.</p>
+          <div class="box">
+            <form class="formbox" name="form1" id="newsletter" action="#newsletter">
+            <div class="formentry">
+            <input type="text" id="txtEmail" class="entry" placeholder="Your Email">
+            <button type="submit" name="submit" class="buttonpress" onclick='Javascript:checkEmail();'>Subscribe</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="contact">
+          <p>&copy;2017 Aloha Apparel Co.</p>
+          <p>Powered by HTML and CSS.</p>
+          <p>604-604-6040. info@alohaapparel.com</p>
+          <p>1490 W Broadway</p>
+          <p>Vancouver, BC, Canada</p>
+        </div>
+        <div class="id">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-pinterest" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </footer>
+
+    </div>
+    <script function checkEmail() {
+
+		    	var email = document.getElementById('txtEmail');
+		    	var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+		    	if (!filter.test(email.value)) {
+		   		 alert('Please provide a valid email address');
+		    	return false;
+				} else if (filter.test(email.value)) {
+				alert('Thanks for subscribing!');
+				document.getElementById('txtEmail').value='';
+		    	return true;
+				}
+			}
+    </script>
+  </body>
+
+</html>
