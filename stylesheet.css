@@ -18,27 +18,33 @@
   font-family: 'Raleway', sans-serif;
   color: #e2574c;
   font-size: 20px;
+  word-spacing: 30px;
+}
+.no-underline {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  color: #e2574c;
 }
 .logo{
   height: auto;
   width: 100%;
-  max-width: 120px;
+  max-width: 150px;
   padding-top: 5px;
 }
 .cart{
   height: auto;
   width: 100%;
-  max-width: 50px;
+  max-width: 70px;
   padding-top: 5px;
 }
 .banner{
   display: flex;
   justify-content: center;
-  background-image: url("images/flower-bkgd.jpg");
+  background-image: url("images/banner.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: round;
   padding-top: 75px;
-  filter: grayscale(55%);
+  filter: saturate(100%);
 }
 .girl{
   padding-top: 15px;
@@ -61,19 +67,57 @@
   max-width: 100%;
   max-height: auto;
 }
-.men{
-  flex-grow: 5;
-  height: 300px;
-  width: 100%;
+.category-image {
+  height: 25vh;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
 }
-.trendsglasses{
-  flex-grow: 5;
+.category-text {
+  font-weight: 400;
 }
-.salebag{
-  flex-grow: 5;
+.mens-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("images/laptop-category.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.women{
-  flex-grow: 5;
+.trends-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("images/tv-category.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: round;
+}
+.glasses-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("images/home-audio-category.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sale-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("images/tablet-category.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bags-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/desktop-category.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.womens-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/cell-category.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .love{
   border-top: solid;
@@ -86,14 +130,11 @@
 .main-carousel{
   align-content: center;
 }
-.clothes{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 .knit{
   text-align: center;
   padding-top: 20px;
+  max-width: 50%;
+  max-height: 50%;
 }
 .cotton{
   text-align: center;

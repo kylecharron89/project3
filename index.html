@@ -1,43 +1,83 @@
 <html>
   <head>
-    <title>Aloha Apparel Co.</title>
+    <title>BEST BUY COMPUTER SHIT</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
     <script src="https://use.fontawesome.com/334ceb063c.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
     <script type="text/javascript" src="flickity.js"></script>
     <meta charset="UTF-8">
     <script src="smoothscroll.js"></script>
   </head>
   <body>
+    <!-- Load smoothscroll.js script -->
+    <script src="smoothscroll.js"></script>
+
 
     <div class="flexbox">
       <header>
         <div class="top">
-            <img class="logo" src="images/aloha-logo.svg"/>
-            <img class="cart" src="images/cart-icon.svg"/>
+          <img class="logo" src="images/aloha-logo.svg"/>
+          <img class="cart" src="images/cart-icon.svg"/>
         </div>
         <div class="navbar">
-          <p>About</p>
-          <p>Shop</p>
-          <p>Featured</p>
-          <p>Updates</p>
+          <ul>
+            <a class="no-underline" href="#aboutSection">ABOUT</a>
+            <a class="no-underline" href="#productSection">SHOP</a>
+            <a class="no-underline" href="#featuredSection">FEATURED</a>
+            <a class="no-underline" href="#updatesSection">UPDATES</a>
+          </ul>
         </div>
       </header>
       <div class="banner">
         <img class="girl" src="images/banner-girl.png" />
       </div>
 
-      <div class="handcrafted">
-        <h1><span class="italics">Hand-Crafted</span> Styles</h1>
-        <p>Aloha Apparel Co. sells on the finest ready-to-travel
-           clothing. Browse our current selection of products or
-           sign-up for updates below.</p>
+      <div id="aboutSection" class="handcrafted">
+        <h1><span class="italics">Have you ever wanted to</span> buy something?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.</p>
       </div>
-      <main class="products">
+
+      <section id="categorySection" class="flex flex-direction-column">
+        <div class="flex flex-direction-column tablet-categories">
+          <div class="flex flex-justify-center align-center category-image mens-image flex-1">
+            <p class="banner-text-small white-text shadow-text">LAPTOPS/ULTRABOOKS</p>
+          </div>
+          <div class="flex flex-direction-row flex-1">
+            <div class="flex flex-justify-center align-center trends-image category-image flex-1">
+              <p class="banner-text-small white-text shadow-text">4K TV'S</p>
+            </div>
+            <div class="flex flex-justify-center align-center glasses-image category-image flex-1">
+              <p class="banner-text-small white-text shadow-text">HOME AUDIO</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-direction-column tablet-categories">
+          <div class="flex flex-direction-row flex-1">
+            <div class="flex flex-justify-center align-center category-image sale-image flex-1">
+              <p class="banner-text-small white-text shadow-text">TABLETS</p>
+            </div>
+            <div class="flex flex-justify-center align-center category-image bags-image flex-1">
+              <p class="banner-text-small white-text shadow-text">DESKTOPS</p>
+            </div>
+          </div>
+          <div class="flex flex-justify-center align-center category-image womens-image flex-1">
+            <p class="banner-text-small white-text shadow-text">CELLPHONES</p>
+          </div>
+        </div>
+      </section>
+
+      <main id="productSection" class="products">
         <div class="love">
           <h1><span class="italics">Most-Loved</span> Products</h1>
         </div>
@@ -95,7 +135,7 @@
           </div>
 
       </main>
-      <div class="updates">
+      <div id="updatesSection" class="updates">
         <div class="signup">
           <h1><span class="italics">Sign-Up for</span> Updates</h1>
           <p>Stay updated on our latest product releases,
@@ -105,7 +145,7 @@
             <form class="formbox" name="form1" id="newsletter" action="#newsletter">
             <div class="formentry">
             <input type="text" id="txtEmail" class="entry" placeholder="Your Email">
-            <button type="submit" name="submit" class="buttonpress" onclick='Javascript:checkEmail();'>Subscribe</button>
+            <button type="submit" name="submit" class="buttonpress" onclick='javascript:validateEmail(document.emailForm.email1);'>Subscribe</button>
             </div>
             </form>
           </div>
@@ -130,20 +170,19 @@
       </footer>
 
     </div>
-    <script function checkEmail() {
-
-		    	var email = document.getElementById('txtEmail');
-		    	var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-		    	if (!filter.test(email.value)) {
-		   		 alert('Please provide a valid email address');
-		    	return false;
-				} else if (filter.test(email.value)) {
-				alert('Thanks for subscribing!');
-				document.getElementById('txtEmail').value='';
-		    	return true;
-				}
-			}
+    <script function validateEmail(inputText) {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat)) {
+        document.emailForm.email1.focus();
+        alert("Email submission successful!");
+        return true;
+      }
+      else {
+        alert("You have entered an invalid email address!");
+        document.emailForm.email1.focus();
+        return false;
+      }
+    }
     </script>
   </body>
 
